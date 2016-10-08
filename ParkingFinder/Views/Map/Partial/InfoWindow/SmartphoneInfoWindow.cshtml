@@ -1,0 +1,24 @@
+﻿@model ParkingFinder.Core.Models.Results.Json.Base.IParkadeModel
+
+<div id="infoWindowSmartphone" class="hidden">
+    <div class="iw-xs-container Teaser">
+        <div class="iw-title @($"category{Model.OccupancyModel.OccupancyData.Category}")">
+            ID: @Model.Id
+        </div>
+
+        <div class="routeInformation hidden">
+            <div class="iw-content">
+                @Html.Partial("Partial/RouteInformation/InfoWindowRouteDetailInformation")
+            </div>
+        </div>
+
+        <div class="baseInformation">
+            <div class="iw-content">
+                <p>
+                    Free Places: @Model.OccupancyModel.OccupancyData.CategoryText / @Model.ParkraumStellplaetze
+                </p>
+                @Html.Partial("Partial/BaseInformation/InfoWindowBaseDetailInformation", Model)
+            </div>
+        </div>
+    </div>
+</div>

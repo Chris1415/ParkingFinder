@@ -1,0 +1,37 @@
+﻿@model ParkingFinder.Core.Models.Results.Json.Base.IParkadeModel
+
+<p class="category">
+    Category: @Model.OccupancyModel.OccupancyData.Category
+</p>
+<p>
+    Free Parking: @Model.TarifFreiparkzeitEn <br />
+    Preis 20 Min: @Model.Tarif20Min € <br />
+    Preis 30 Min: @Model.Tarif30Min € <br />
+    Preis 1h: @Model.Tarif1Std € <br />
+    Preis 1d: @Model.Tarif1Tag € <br />
+</p>
+<p>
+    Out of Order: @Model.ParkraumIsAusserBetrieb
+</p>
+<p>
+    <button type="button" class="btn btn-primary CalculateRoute" onClick="calculateAndDisplayRoute(@Model.Latitude, @Model.Longitude);">
+        Calculate Route »
+    </button>
+    <button type="button" style="display: none;" class="btn btn-warning RemoveCalculatedRoute" onClick="RemoveDisplayedRoute();">
+        Remove Route »
+    </button>
+    <br />
+    <button type="button"
+            class="btn btn-primary AddFavorite"
+            style="display: @Html.Raw((bool) ViewData["IsFavorite"] ? "none" : "block")"
+            onClick='
+            SetMarkersFavoriteStatus("true", "@Model.Id" );'>
+        Add As Favorite »
+    </button>
+    <button type="button"
+            class="btn btn-warning RemoveFavorite"
+            style="display: @Html.Raw(!(bool) ViewData["IsFavorite"] ? "none" : "block")"
+            onClick='SetMarkersFavoriteStatus("false", "@Model.Id");'>
+        Remove As Favorite »
+    </button>
+</p>

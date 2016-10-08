@@ -1,0 +1,166 @@
+﻿.fullWidth {
+    width: 100%;
+}
+
+.btn-primary {
+    background-color: #48b5e9;
+}
+
+.form-group {
+    padding-right: 15px;
+    padding-left: 10px;
+}
+
+.DropDown {
+    margin: 10px;
+    width: 100px;
+    height: 36px;
+    vertical-align: middle;
+    max-width: initial;
+}
+
+#AlertInputBox {
+    display: none;
+}
+
+.Teaser {
+    border: black;
+    border-radius: 10px 10px 10px 10px;
+    background-color: #eeeeee;
+}
+
+    .Teaser h2 {
+        background-color: #48b5e9;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .Teaser .text {
+        padding-bottom: 5px;
+        padding-right: 10px;
+    }
+
+    .Teaser .text {
+        padding-left: 10px;
+        padding-bottom: 10px;
+    }
+
+    .Teaser .content {
+        padding-bottom: 10px;
+        padding-left: 10px;
+    }
+
+    .Teaser p {
+        margin-top: 10px;
+    }
+
+        .Teaser p a {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+    .Teaser #AnalyticsCollection, .Teaser #StopAnalyticsCollection {
+        border-radius: 0 0 10px 10px;
+    }
+
+
+.big {
+    font-size: 16px;
+}
+
+.jumbotron {
+    margin-bottom: 0;
+}
+
+.cookie {
+    width: 100%;
+    bottom: 0;
+    z-index: 100;
+    position: fixed;
+    opacity: 0.9;
+    height: 70px;
+    background-color: #999999;
+}
+
+    .cookie .text {
+        color: black;
+        line-height: 70px;
+        font-weight: bold;
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .cookie .cookieClose {
+        float: right;
+        font-size: 40px;
+        color: black;
+    }
+
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1600px;
+    }
+}
+
+@media (min-width: 720px) and (max-width: 1000px) {
+    .cookie .text {
+        font-size: 16px;
+    }
+
+    .cookie .cookieClose {
+        font-size: 24px;
+    }
+}
+
+
+@media (min-width: 640px) and (max-width: 719px) {
+    .cookie {
+        height: 70px;
+    }
+
+        .cookie .text {
+            font-size: 14px;
+            line-height: 40px;
+            padding: 10px;
+        }
+
+        .cookie .cookieClose {
+            font-size: 20px;
+        }
+}
+
+@media (min-width: 376px) and (max-width: 639px) {
+    .cookie {
+        height: 80px;
+    }
+
+        .cookie .text {
+            font-size: 14px;
+            line-height: 40px;
+            padding-bottom: 10px;
+        }
+
+        .cookie .cookieClose {
+            font-size: 20px;
+        }
+}
+
+@media (max-width: 375px) {
+    .cookie {
+        height: 90px;
+    }
+
+        .cookie .text {
+            font-size: 12px;
+            line-height: 30px;
+            padding-bottom: 10px;
+            padding-right: 10px;
+        }
+
+        .cookie .cookieClose {
+            font-size: 20px;
+        }
+}

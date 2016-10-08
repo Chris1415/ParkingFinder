@@ -1,0 +1,3 @@
+[submodule "Hach.Library"]
+	path = Hach.Library
+	url = https://github.com/Chris1415/Hach.Library.git

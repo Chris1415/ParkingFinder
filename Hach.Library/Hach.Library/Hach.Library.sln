@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hach.Library", "Hach.Library\Hach.Library.csproj", "{73665B3B-9905-4067-A5E7-CC104AF46D8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hach.Library.Test", "Hach.Library.Test\Hach.Library.Test.csproj", "{4054E70B-2B1F-444E-8637-06AC1D4CDEAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{73665B3B-9905-4067-A5E7-CC104AF46D8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73665B3B-9905-4067-A5E7-CC104AF46D8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73665B3B-9905-4067-A5E7-CC104AF46D8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73665B3B-9905-4067-A5E7-CC104AF46D8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4054E70B-2B1F-444E-8637-06AC1D4CDEAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4054E70B-2B1F-444E-8637-06AC1D4CDEAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4054E70B-2B1F-444E-8637-06AC1D4CDEAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4054E70B-2B1F-444E-8637-06AC1D4CDEAE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

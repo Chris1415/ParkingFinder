@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+}
+
+<div class="jumbotron">
+    <h1>Parking Finder Dashboard </h1>
+    <p>
+        Get all Information about <b>Train Stations</b>, <b>Parkades</b> and <b>Occupancies</b> here in the Dashboard
+    </p>
+    <p>
+        Or go directly to the @Html.ActionLink(" Parkade Finder ", "Index", "Map")  to find your Parkade        
+    </p>
+</div>
+
+<div class="row">
+    <div class="col-md-8" id="FavoriteTeaserWrapper">
+        @Html.Action("FavoriteTeaser", "Map")
+    </div>
+    <div class="col-md-4">
+        @Html.Partial("Partial/MapTeaser")
+    </div>
+</div>
+<div class="row">
+    @Html.Action("DataOverview", "Dashboard")
+</div>
+<div class="row">
+    <div class="col-md-4">
+        @Html.Action("BestParkingFormView", "Analytics")
+    </div>
+    <div class="col-md-4">
+        @Html.Action("ParkingPredictionFormView", "Analytics")
+    </div>
+    <div class="col-md-4">
+        @Html.Action("DataCollectionView", "Analytics")
+    </div>
+</div>
+
+@section scripts {
+    @Scripts.Render("~/bundles/Analytics")
+    <!-- GeoIp Script -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+}

@@ -1,0 +1,47 @@
+﻿@using Hach.Library.Configuration.Reader
+@{
+    ViewBag.Title = "Parking Finder";
+}
+
+
+<div class="row">
+    <div class="col-md-12" id="HeadlineMap">
+        <div class="wrapper">
+            <div class="Map grayout" id="Map">
+            </div>
+            <div id="SearchBox">
+                <label for="pac-input">Parkade Search</label>
+                <div>
+                    <a href="#" class="glyphicon glyphicon-screenshot" id="LocateMe"></a>
+                    <input id="pac-input" class="controls inputBlock" type="text" placeholder="PLZ, City, Street">
+                    <a class="glyphicon glyphicon-search" href="#" id="Search"></a>
+
+                </div>
+            </div>
+            <div id="InfoPlaceholder">
+            </div>
+            <i class="fa fa-spinner fa-spin" id="gmapSpinner"></i>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div id="AlertInputBox" class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only">Error:</span>
+            <span id="ErrorLabel"></span>
+        </div>
+    </div>
+    <div class="col-md-12 hidden-md hidden-lg visible-sm visible-xs" id="smartphoneViewWrapper">
+    </div>
+   
+</div>
+
+@section scripts {
+    @Scripts.Render("~/bundles/MapScripts")
+    @Scripts.Render("~/bundles/Analytics")
+    <!-- GeoIp Script -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=geometry&callback=initMap&key=@Settings.GoogleMapsApiKey"></script>
+}
+
+

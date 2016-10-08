@@ -1,0 +1,19 @@
+﻿@model ParkingFinder.Core.Models.Results.Json.Base.IParkadeModel
+
+<div id="@Model.Id">
+    <div class="iw-container">
+        <div class="iw-title @($"category{Model.OccupancyModel.OccupancyData.Category}")">
+            ID: @Model.Id
+        </div>
+
+        @Html.Partial("Partial/RouteInformation/InfoWindowRouteInformation")
+
+        @Html.Partial("Partial/BaseInformation/InfoWindowBaseInformation", Model)
+
+        <div class="gmCloseIcon" onclick="CloseClicked();">
+            <div id="CloseButton" class="glyphicon glyphicon-remove"></div>
+        </div>
+    </div>
+</div>
+
+@Html.Partial("Partial/InfoWindow/SmartphoneInfoWindow", Model)

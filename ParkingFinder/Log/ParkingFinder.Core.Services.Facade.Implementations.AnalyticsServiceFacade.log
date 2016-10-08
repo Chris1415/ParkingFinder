@@ -1,0 +1,4 @@
+2016-09-17 14:17:13.3572 ParkingFinder.Core.Services.Facade.Implementations.AnalyticsServiceFacade DataCollectionLoop: shutdown triggered
+2016-09-17 14:17:16.8462 ParkingFinder.Core.Services.Facade.Implementations.AnalyticsServiceFacade DataCollectionLoop: shutdown triggered
+2016-09-17 14:17:17.8262 ParkingFinder.Core.Services.Facade.Implementations.AnalyticsServiceFacade DataCollectionLoop: shutdown triggered
+2016-09-17 19:06:57.0832 ParkingFinder.Core.Services.Facade.Implementations.AnalyticsServiceFacade AnalyseBestParking: Request Model is not valid

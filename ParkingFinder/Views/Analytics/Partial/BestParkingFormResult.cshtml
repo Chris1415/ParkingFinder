@@ -1,0 +1,41 @@
+﻿@using ParkingFinder.Core.Models.Analytics
+@model ParkingFinder.Core.Models.Analytics.IBestParkingAnalyticsModel
+
+<div class="col-sm-offset-2 content big">
+    <b>
+        @Model.ResultText
+    </b>
+</div>
+<div class="hidden">
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Date Time
+                </th>
+                <th>
+                    Free Places
+                </th>
+                <th>
+                    Category
+                </th>
+            </tr>
+        </thead>
+
+        @foreach (IParkingFinderAnalyticsData element in Model.AnalyticsData)
+        {
+            <tr>
+                <td>
+                    @element.TimeStamp.ToShortDateString() - @element.TimeStamp.ToLongTimeString()
+                </td>
+                <td>
+                    @element.OccupancyModel.OccupancyData.CategoryText
+                </td>
+                <td>
+                    @element.OccupancyModel.OccupancyData.Category
+                </td>
+            </tr>
+        }
+    </table>
+    
+</div>

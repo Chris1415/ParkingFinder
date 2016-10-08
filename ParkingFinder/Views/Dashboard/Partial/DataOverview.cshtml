@@ -1,0 +1,56 @@
+﻿@model Tuple<ParkingFinder.Core.Models.Results.Json.IParkadesModel, ParkingFinder.Core.Models.Results.Json.ITrainStationsModel, ParkingFinder.Core.Models.Results.Json.IOccupanciesModel>
+
+<div class="col-md-4">
+    <div class="Teaser">
+        <h2>
+            Parkades
+        </h2>
+        <div class="text">
+            Total Number :
+            <b>
+                @Model.Item1.Parkades.Count()
+            </b>
+            <br />
+            Nam ut quam ipsum. Sed et tincidunt diam. Ut maximus
+            sagittis ligula, at molestie orci lacinia in. Fusce arcu sapien,
+            interdum at elit non, rutrum commodo lectus. Nullam pellentesque nunc
+            Nam ut quam ipsum. Sed et tincidunt diam. Ut maximus
+            sagittis ligula, at molestie orci lacinia in. Fusce arcu sapien,
+            interdum at elit non, rutrum commodo lectus. Nullam pellentesque nunc
+        </div>
+
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="Teaser">
+        <h2>
+            Trainstations
+        </h2>
+        <div class="text">
+            Total Number :
+            <b>
+                @Model.Item2.TrainStations.Count()
+            </b>
+            <br />
+            Nam ut quam ipsum. Sed et tincidunt diam. Ut maximus
+            sagittis ligula, at molestie orci lacinia in. Fusce arcu sapien,
+            interdum at elit non, rutrum commodo lectus. Nullam pellentesque nunc
+            Nam ut quam ipsum. Sed et tincidunt diam. Ut maximus
+        </div>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="Teaser">
+        <h2>
+            Occupancies
+        </h2>
+        <div class="text">
+            Total Number :
+            <b>
+                @Model.Item3.Occupancies.Count()
+            </b> 
+            <br />
+            Nam ut quam ipsum. Sed et tincidunt diam. Ut maximus
+        </div>
+    </div>
+</div>

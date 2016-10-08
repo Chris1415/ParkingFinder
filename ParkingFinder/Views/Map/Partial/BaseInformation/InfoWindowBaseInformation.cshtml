@@ -1,0 +1,17 @@
+﻿@model ParkingFinder.Core.Models.Results.Json.Base.IParkadeModel
+
+<div class="baseInformation">
+    <div class="iw-content">
+        <p class="NumberOfFreePlaces">
+            Free Places: @Model.OccupancyModel.OccupancyData.CategoryText / @Model.ParkraumStellplaetze
+        </p>
+        <div class="hidden-xs hidden-sm">
+           @Html.Partial("Partial/BaseInformation/InfoWindowBaseDetailInformation", Model)
+        </div>
+        <div class="hidden-md hidden-lg">
+            <a href="" onclick="ScrollTo('#smartphoneViewWrapper');return false;">
+                Show Details
+            </a>
+        </div>
+    </div>
+</div>

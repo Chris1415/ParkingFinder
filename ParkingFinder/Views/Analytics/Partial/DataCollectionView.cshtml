@@ -1,0 +1,62 @@
+﻿@using ParkingFinder.Core.Models.Analytics
+@model ParkingFinder.Models.AnalyticsCollectionViewModel
+
+<div class="Teaser">
+    <h2>Analytics Data Collector</h2>
+    <div class="text">
+        <p>
+            Total Number of collected Parkades:
+            <b>
+                @Model.AnalyticsModel.AnalyticsData.Count
+            </b>         
+        </p>
+        <p>
+            Total Number of Data Collected:
+            <b>
+                @Html.Raw(Model.AnalyticsModel.AnalyticsData.Sum(element => element.Value.Count))
+            </b>
+        </p>
+        <p>
+            Number of Days of collecting data:
+            @{
+                List<string> list = new List<string>();
+                string lastDateTime = string.Empty;
+                foreach (IList<IParkingFinderAnalyticsData> element in Model.AnalyticsModel.AnalyticsData.Values)
+                {
+                    foreach (IParkingFinderAnalyticsData subElement in element)
+                    {
+                        string dateTime = subElement.TimeStamp.ToString("dd.MM.yyyy");
+                        lastDateTime = subElement.TimeStamp.ToLongDateString() + " - " + subElement.TimeStamp.ToLongTimeString();
+                        if (!list.Contains(dateTime))
+                        {
+                            list.Add(dateTime);
+                        }
+                    }
+                }
+                <b>
+                    @Html.Raw(list.Count)
+                </b>
+            }
+        </p>
+        <p>
+            Dates of Data Collection: <b>
+                @foreach (string element in list)
+                {
+                    @Html.Raw(element + " | ")
+                }
+            </b>
+
+        </p>
+        <p>
+            Last Time Data taken:
+            <b>
+                @lastDateTime
+            </b>
+        </p>
+
+        This button starts / stops the analytics data collection. <br />
+        By pressing the button you will let the server continuously collect data about current Parkade Occupancies
+    </div>
+    <button type="button" id="AnalyticsCollection" class="btn btn-success fullWidth" style="display: @Html.Raw(Model.ShowStartCollection ? "block" : "none")">Collect</button>
+    <button type="button" id="StopAnalyticsCollection" class="btn btn-danger fullWidth" style="display: @Html.Raw(!Model.ShowStartCollection ? "block" : "none")">Stop Collection</button>
+</div>
